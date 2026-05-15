@@ -1,0 +1,48 @@
+---
+title: HubMessage Documentation
+description: Sync iMessages to your HubSpot CRM with a quiet macOS menu bar app.
+template: splash
+hero:
+  tagline: A quiet macOS menu bar app that syncs your iMessages straight into HubSpot — contacts matched, communications logged, conversations threaded.
+  actions:
+    - text: Install HubMessage
+      link: /getting-started/installation/
+      icon: right-arrow
+      variant: primary
+    - text: Visit hubmessage.app
+      link: https://hubmessage.app
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## What HubMessage does
+
+HubMessage reads your local iMessage history, matches the participants against
+contacts in your HubSpot portal, and logs each message as a communication record
+on the matching contact. Optionally, it streams those messages into a dedicated
+**iMessage channel** in your HubSpot inbox so your team can reply from inside
+HubSpot.
+
+It runs as a menu bar app on your Mac. No dock icon, no analytics, no telemetry.
+
+<CardGrid stagger>
+  <Card title="Quick install" icon="laptop">
+    Download, grant Full Disk Access, sign in to HubSpot. [Get started →](/getting-started/installation/)
+  </Card>
+  <Card title="How sync works" icon="setting">
+    Contacts-first matching, incremental refresh, dedup by `hs_unique_id`. [Read more →](/guides/how-sync-works/)
+  </Card>
+  <Card title="Privacy first" icon="approve-check">
+    Your messages stay on your Mac except for the records you choose to send to HubSpot. [Details →](/privacy/data-handling/)
+  </Card>
+  <Card title="Need help?" icon="email">
+    Email [support@hubmessage.app](mailto:support@hubmessage.app) or check the [troubleshooting guide](/help/troubleshooting/).
+  </Card>
+</CardGrid>
+
+---
+
+HubMessage is published by **Neko Venture Partners Limited**.
+Subscriptions are processed by Paddle. See the [Billing](/billing/subscriptions/)
+and [Legal](/legal/privacy-policy/) sections for the full details.

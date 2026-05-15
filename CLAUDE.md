@@ -2,24 +2,91 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Status
+## What this repo is
 
-This is the **documentation project** for the HubMessage system. It is currently
-near-empty — only a placeholder `README.md` exists. Flesh this file out as real
-content lands (build/preview commands, site structure, publishing flow).
+`docs.hubmessage.app` — the **public documentation site** for HubMessage. It is
+served by a small Cloudflare Worker that gates the entire site behind HTTP
+Basic Auth (single shared password) while the project is in private preview.
 
-## What HubMessage is
+Authoritative content about app or proxy behaviour lives in the source repos
+(`/Users/user/code/xcode/HubMessage/CLAUDE.md` for the Mac app,
+`/Users/user/code/hub-message-api/CLAUDE.md` for the API proxy). This repo is
+**downstream** of both — if docs and code disagree, the code wins.
 
-HubMessage is a macOS menu bar app that talks to HubSpot's Custom Channels API
-through a Cloudflare Worker proxy. The system spans several **separate git repos**;
-this `hub-message-doc` repo is meant to document it.
+## Architecture in one paragraph
 
-| Component | Location | Role |
-|-----------|----------|------|
-| API proxy | `/Users/user/code/hub-message-api` | Cloudflare Worker that injects the HubSpot developer key server-side. Has its own detailed `CLAUDE.md`. |
-| macOS client | `/Users/user/code/xcode/HubMessage` | The menu bar app. Calls the worker. |
-| HubSpot project config | `~/HubMessage` | OAuth scopes and app metadata. |
+Astro 6 + Starlight build the docs as static HTML/CSS/JS into `dist/`. A
+Cloudflare Worker (`worker/index.ts`) is bound to the `dist/` directory via
+the `ASSETS` binding and configured with `run_worker_first = true` so that
+every request — asset hit or miss — passes through the Worker first. The
+Worker checks HTTP Basic Auth against the `DOCS_PASSWORD` secret, then hands
+the request to `env.ASSETS.fetch(request)`. There is no server-side rendering
+and no per-request work beyond the auth check.
 
-When documenting behaviour, treat `hub-message-api/CLAUDE.md` as the source of
-truth for the proxy's architecture and security properties rather than restating
-it from memory.
+## Commands
+
+```sh
+npm run dev        # Astro dev server on :4321 (no auth, content authoring)
+npm run preview    # Build + wrangler dev on :8787 (with auth, integration test)
+npm run build      # Just `astro build` -> dist/
+npm run deploy     # astro build && wrangler deploy
+npm run typecheck  # astro check
+```
+
+The Basic Auth password during `wrangler dev` comes from `.dev.vars`
+(`DOCS_PASSWORD="..."`); in production it's a Wrangler secret. Both are
+gitignored / never committed.
+
+## Layout
+
+```
+astro.config.mjs           — Starlight integration, sidebar config, site URL
+src/content.config.ts      — Astro content collection definition (Starlight schema)
+src/content/docs/          — All docs pages, organised by section
+public/favicon.svg         — Static assets passed through to dist/
+worker/index.ts            — Basic Auth gate
+worker/tsconfig.json       — Workers-types TS config, isolated from Astro
+wrangler.toml              — Worker name, assets binding, custom domain
+```
+
+The Astro tsconfig at the repo root **excludes** `worker/` because the Worker
+uses `@cloudflare/workers-types`, not the DOM. The Worker has its own
+tsconfig.
+
+## Adding a page
+
+1. Create the `.md` / `.mdx` file under `src/content/docs/<section>/`.
+2. Add an entry to the sidebar in `astro.config.mjs` (Starlight does not
+   auto-build the sidebar; explicit entries make ordering deterministic).
+3. The slug is the path under `src/content/docs/` minus the extension. For
+   `src/content/docs/billing/subscriptions.md` the URL is
+   `/billing/subscriptions/`.
+
+## Things to know
+
+- **`run_worker_first = true` in `wrangler.toml` is load-bearing.** Without it
+  the Worker only runs for asset *misses*, which means static files leak past
+  the auth gate. Don't remove it while the docs are still gated.
+- **`DOCS_PASSWORD` is checked with a constant-time comparison** in the
+  Worker. Don't replace it with `===`.
+- **`/__health` is intentionally unauthenticated** so uptime checks can verify
+  the Worker is alive. Keep it returning a fixed string with no secrets.
+- **The Cloudflare account ID is pinned** in `wrangler.toml` to the same
+  account that hosts `hubmessage.app` (and `api.hubmessage.app`). Deploys
+  from a different tenant will fail loudly; that's by design.
+- **The publisher entity is `Neko Venture Partners Limited`**, support email
+  `support@hubmessage.app`. The bundle ID `uk.nvpartners.hubmessage` is a
+  historical short form ("NV Partners") that appears in old drafts — when
+  writing user-facing content, prefer the full legal name.
+
+## When to remove the Basic Auth gate
+
+The gate is a temporary measure for private preview. When the docs go fully
+public, deleting it cleanly means:
+
+1. Remove the auth check from `worker/index.ts` (the Worker can stay for
+   `/__health` and to set custom headers, or be deleted entirely — in which
+   case remove `main` from `wrangler.toml` and `run_worker_first` from
+   `[assets]`).
+2. `wrangler secret delete DOCS_PASSWORD`.
+3. Update this file and the README to drop the auth references.
