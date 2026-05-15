@@ -17,6 +17,9 @@ account_id = "c07309771abb829078a03ffe0565e692"
 directory = "./dist"
 binding = "ASSETS"
 run_worker_first = true
+# Serve dist/404.html (built from src/content/docs/404.md) with a 404 status
+# whenever env.ASSETS.fetch can't match a request to a built file.
+not_found_handling = "404-page"
 
 # Bound to the docs subdomain. The hubmessage.app zone lives on the same
 # Cloudflare account as the API worker, so custom_domain = true handles DNS

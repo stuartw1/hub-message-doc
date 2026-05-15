@@ -20,7 +20,10 @@ processing described below.
 **Neko Venture Partners Limited** ("we") is the data controller for the
 data the app stores about you on your own Mac and the limited
 operational data our servers process when the app calls HubSpot
-through our proxy. We do **not** operate a server that collects,
+through our proxy. We are a company registered in England and Wales
+under company number **14784729**, with our registered office at
+**71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United
+Kingdom**. We do **not** operate a server that collects,
 aggregates, or analyses your message content. The Cloudflare Worker we
 run at `api.hubmessage.app` is a stateless proxy used only to inject
 API keys into requests you make to HubSpot — it does not log message
@@ -175,5 +178,6 @@ Questions about this policy, or to exercise your data-protection
 rights, email
 [support@hubmessage.app](mailto:support@hubmessage.app).
 
-Neko Venture Partners Limited
-United Kingdom
+**Neko Venture Partners Limited**
+71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom
+Registered in England and Wales · Company number 14784729

@@ -27,10 +27,15 @@ Subscriptions are billed by **Paddle.com Market Limited** as our
 Merchant of Record. Pricing, billing cycles, and applicable taxes are
 shown at the point of checkout.
 
-Cancellation, refund, and failed-payment handling are described on
-the [Subscriptions](/billing/subscriptions/) page and the
-[Refund Policy](/legal/refund-policy/), which form part of these
-Terms.
+Every new account begins with a **30-day free trial**; no card
+details are required to start the trial, and you will only be billed
+if you actively choose to subscribe at (or after) its end. After
+billing begins, you may request a **full refund within 14 days of any
+payment, for any reason**. Cancellation, refund, free-trial mechanics,
+and failed-payment handling are described in full on the
+[Subscriptions](/billing/subscriptions/) page and the
+[Refund Policy](/legal/refund-policy/), both of which form part of
+these Terms.
 
 ## 3. What you may not do
 
@@ -154,5 +159,6 @@ Terms.
 
 [support@hubmessage.app](mailto:support@hubmessage.app)
 
-Neko Venture Partners Limited
-United Kingdom
+**Neko Venture Partners Limited**
+71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom
+Registered in England and Wales · Company number 14784729

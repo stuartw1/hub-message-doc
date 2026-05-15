@@ -53,6 +53,29 @@ npm run deploy
 script and `dist/` upload together; Cloudflare's edge starts serving
 the new build within seconds.
 
+## Regenerating brand assets
+
+The canonical source logo lives at `src/assets/hubmessage-logo.png`
+(500×500, with wordmark). Every derivative — the trimmed/transparent
+header icon, the favicon, the Apple touch icon, and the Open Graph
+social card — is generated from it by ImageMagick.
+
+```sh
+npm run icons
+```
+
+This runs `scripts/build-icons.sh`, which writes:
+
+- `src/assets/hubmessage-icon.png` — bubbles-only, transparent
+  background (Starlight `logo.src`)
+- `public/favicon.png` — 32×32, transparent
+- `public/apple-touch-icon.png` — 180×180, white background
+- `public/og-image.png` — 1200×630 social card with tagline + domain
+
+Replace the source PNG and re-run `npm run icons` to refresh
+everything in one step. Requires ImageMagick 7 (`brew install
+imagemagick`).
+
 ## Adding pages
 
 1. Drop a new `.md` or `.mdx` file under `src/content/docs/<section>/`.

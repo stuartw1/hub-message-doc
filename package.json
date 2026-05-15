@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro build && wrangler dev",
     "deploy": "astro build && wrangler deploy",
+    "icons": "sh scripts/build-icons.sh",
     "astro": "astro",
     "typecheck": "astro check"
   },

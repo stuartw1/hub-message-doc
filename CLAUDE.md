@@ -30,6 +30,7 @@ npm run dev        # Astro dev server on :4321 (no auth, content authoring)
 npm run preview    # Build + wrangler dev on :8787 (with auth, integration test)
 npm run build      # Just `astro build` -> dist/
 npm run deploy     # astro build && wrangler deploy
+npm run icons      # Regenerate every brand asset from src/assets/hubmessage-logo.png
 npm run typecheck  # astro check
 ```
 
@@ -40,14 +41,31 @@ gitignored / never committed.
 ## Layout
 
 ```
-astro.config.mjs           — Starlight integration, sidebar config, site URL
+astro.config.mjs           — Starlight integration, sidebar config, site URL, OG meta
 src/content.config.ts      — Astro content collection definition (Starlight schema)
 src/content/docs/          — All docs pages, organised by section
-public/favicon.svg         — Static assets passed through to dist/
+src/assets/                — Canonical PNG sources; `hubmessage-logo.png` is the
+                             one to replace if branding changes
+public/                    — Generated favicons + apple-touch + OG image (output
+                             of `npm run icons`)
+scripts/build-icons.sh     — ImageMagick pipeline that builds every derivative
+                             from src/assets/hubmessage-logo.png
 worker/index.ts            — Basic Auth gate
 worker/tsconfig.json       — Workers-types TS config, isolated from Astro
 wrangler.toml              — Worker name, assets binding, custom domain
 ```
+
+## Branding
+
+The source of truth is `src/assets/hubmessage-logo.png` (500×500, bubbles +
+wordmark). Everything else — the trimmed transparent header icon, the
+favicon, the Apple touch icon, the Open Graph social card — is generated
+by `npm run icons` (`scripts/build-icons.sh`). Generated outputs in
+`public/` and `src/assets/hubmessage-icon.png` are committed so a fresh
+checkout doesn't need ImageMagick installed to build; only re-running the
+script does. **When the source logo changes, run `npm run icons` and
+commit both the source and the regenerated derivatives in the same
+commit** so they stay in lockstep.
 
 The Astro tsconfig at the repo root **excludes** `worker/` because the Worker
 uses `@cloudflare/workers-types`, not the DOM. The Worker has its own

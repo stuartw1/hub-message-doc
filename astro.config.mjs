@@ -11,15 +11,53 @@ export default defineConfig({
       title: 'HubMessage Docs',
       description:
         'Documentation for HubMessage — the macOS menu bar app that syncs iMessages to HubSpot CRM.',
-      favicon: '/favicon.svg',
+      logo: {
+        // Chat-bubbles only (wordmark cropped out at build time via ImageMagick);
+        // pairs with the site title text in the header.
+        src: './src/assets/hubmessage-icon.png',
+      },
+      favicon: '/favicon.png',
+      head: [
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'apple-touch-icon',
+            sizes: '180x180',
+            href: '/apple-touch-icon.png',
+          },
+        },
+        // Social card. Static / site-wide for now; per-page OG image
+        // generation can be added later if the docs grow into many
+        // separately-shareable pages.
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image', content: 'https://docs.hubmessage.app/og-image.png' },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image:width', content: '1200' },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image:height', content: '630' },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image:alt', content: 'HubMessage — sync iMessages straight into HubSpot CRM' },
+        },
+        {
+          tag: 'meta',
+          attrs: { name: 'twitter:card', content: 'summary_large_image' },
+        },
+        {
+          tag: 'meta',
+          attrs: { name: 'twitter:image', content: 'https://docs.hubmessage.app/og-image.png' },
+        },
+      ],
       social: [
         { icon: 'external', label: 'Homepage', href: 'https://hubmessage.app' },
         { icon: 'email', label: 'Support', href: 'mailto:support@hubmessage.app' },
       ],
-      editLink: {
-        // Internal repo; expose for now in case a future contributor needs it.
-        baseUrl: 'https://github.com/stuartw1/hub-message-doc/edit/main/',
-      },
       lastUpdated: true,
       sidebar: [
         {
