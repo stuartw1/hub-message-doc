@@ -7,6 +7,14 @@ workers_dev = false
 # hub-message-api worker, so deploys go to the right tenant.
 account_id = "c07309771abb829078a03ffe0565e692"
 
+# Cloudflare Workers Builds (GitHub-connected auto-deploy) runs `wrangler
+# deploy` directly, which would skip `astro build` and leave ./dist missing.
+# This [build] command runs before deploy in that environment. Local `npm run
+# deploy` already chains astro build && wrangler deploy, so this is a no-op
+# there.
+[build]
+command = "npm install && npm run build"
+
 # Astro Starlight builds static HTML/CSS/JS into ./dist. The Worker serves it
 # via the ASSETS binding *after* the Basic Auth gate runs.
 #
