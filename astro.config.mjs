@@ -4,17 +4,17 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://docs.hubmessage.app',
+  site: 'https://docs.switchmessage.com',
   trailingSlash: 'ignore',
   integrations: [
     starlight({
-      title: 'HubMessage Docs',
+      title: 'SwitchMessage Docs',
       description:
-        'Documentation for HubMessage — the macOS menu bar app that syncs iMessages to HubSpot CRM.',
+        'Documentation for SwitchMessage — the macOS menu bar app that syncs iMessages to HubSpot CRM.',
       logo: {
         // Chat-bubbles only (wordmark cropped out at build time via ImageMagick);
         // pairs with the site title text in the header.
-        src: './src/assets/hubmessage-icon.png',
+        src: './src/assets/switchmessage-icon.png',
       },
       favicon: '/favicon.png',
       head: [
@@ -31,7 +31,7 @@ export default defineConfig({
         // separately-shareable pages.
         {
           tag: 'meta',
-          attrs: { property: 'og:image', content: 'https://docs.hubmessage.app/og-image.png' },
+          attrs: { property: 'og:image', content: 'https://docs.switchmessage.com/og-image.png' },
         },
         {
           tag: 'meta',
@@ -43,7 +43,7 @@ export default defineConfig({
         },
         {
           tag: 'meta',
-          attrs: { property: 'og:image:alt', content: 'HubMessage — sync iMessages straight into HubSpot CRM' },
+          attrs: { property: 'og:image:alt', content: 'SwitchMessage — sync iMessages straight into HubSpot CRM' },
         },
         {
           tag: 'meta',
@@ -51,12 +51,12 @@ export default defineConfig({
         },
         {
           tag: 'meta',
-          attrs: { name: 'twitter:image', content: 'https://docs.hubmessage.app/og-image.png' },
+          attrs: { name: 'twitter:image', content: 'https://docs.switchmessage.com/og-image.png' },
         },
       ],
       social: [
-        { icon: 'external', label: 'Homepage', href: 'https://hubmessage.app' },
-        { icon: 'email', label: 'Support', href: 'mailto:support@hubmessage.app' },
+        { icon: 'external', label: 'Homepage', href: 'https://switchmessage.com' },
+        { icon: 'email', label: 'Support', href: 'mailto:support@switchmessage.com' },
       ],
       lastUpdated: true,
       sidebar: [
@@ -69,7 +69,7 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Using HubMessage',
+          label: 'Using SwitchMessage',
           items: [
             { label: 'How sync works', slug: 'guides/how-sync-works' },
             { label: 'The HubSpot inbox channel', slug: 'guides/inbox-channel' },
@@ -79,7 +79,7 @@ export default defineConfig({
         },
         {
           label: 'Privacy & security',
-          items: [{ label: 'What HubMessage accesses', slug: 'privacy/data-handling' }],
+          items: [{ label: 'What SwitchMessage accesses', slug: 'privacy/data-handling' }],
         },
         {
           label: 'Billing',

@@ -1,18 +1,18 @@
 ---
 title: Subscriptions
-description: How HubMessage billing works, who runs the checkout, and how to manage your subscription.
+description: How SwitchMessage billing works, who runs the checkout, and how to manage your subscription.
 ---
 
-HubMessage is a **subscription-based product**. Your subscription unlocks
+SwitchMessage is a **subscription-based product**. Your subscription unlocks
 sync into HubSpot from the app on every Mac you sign in on with the same
 account.
 
 Specific plans and prices will be listed on
-[hubmessage.app](https://hubmessage.app) when they are finalized. This
+[switchmessage.com](https://switchmessage.com) when they are finalized. This
 page covers the policies that apply regardless of which plan you're on.
 
 :::tip[Risk-free to try]
-Every HubMessage account begins with a **30-day free trial** — **no
+Every SwitchMessage account begins with a **30-day free trial** — **no
 card details are required** to start. You only enter payment information
 if you decide to subscribe at (or after) the end of the trial. If you
 never subscribe, you are never charged.
@@ -35,7 +35,7 @@ Payments and recurring billing are processed by
   Partners Limited never sees or stores your card number or CVV.
 
 We receive from Paddle only the information needed to associate your
-subscription with your HubMessage account: your email address, the
+subscription with your SwitchMessage account: your email address, the
 plan, the subscription status, and Paddle's customer/subscription IDs.
 
 ## The 30-day free trial
@@ -43,10 +43,10 @@ plan, the subscription status, and Paddle's customer/subscription IDs.
 The trial is genuinely friction-free — **no card details are required
 to start it**:
 
-1. Install HubMessage and sign in to your HubSpot portal.
+1. Install SwitchMessage and sign in to your HubSpot portal.
 2. The full app is unlocked for **30 days** from first sign-in. There
    is no separate "start trial" step; it begins automatically.
-3. A countdown appears in HubMessage Settings → **Account** showing how
+3. A countdown appears in SwitchMessage Settings → **Account** showing how
    many days remain.
 4. When the trial ends, the app prompts you to subscribe through
    Paddle. That's the first point at which any payment information is
@@ -55,7 +55,7 @@ to start it**:
    Your local cache and HubSpot records are left in place — you can
    subscribe later and resume where you left off.
 
-If you decide HubMessage isn't for you during those 30 days, **do
+If you decide SwitchMessage isn't for you during those 30 days, **do
 nothing**. The trial simply expires; no charge is ever made. There's
 no "cancellation" step to remember and no need to give a reason —
 because you never signed up for billing in the first place.
@@ -65,12 +65,12 @@ because you never signed up for billing in the first place.
 You can update your payment method, change plans, switch billing
 cycles, or cancel at any time:
 
-- **From inside the app:** HubMessage Settings → **Account** → **Manage
+- **From inside the app:** SwitchMessage Settings → **Account** → **Manage
   subscription** opens Paddle's customer portal for your account.
 - **From email:** every receipt from Paddle includes a "Manage
   subscription" link.
 - **By email:** if you can't access either, write to
-  [support@hubmessage.app](mailto:support@hubmessage.app) and we'll
+  [support@switchmessage.com](mailto:support@switchmessage.com) and we'll
   help.
 
 ## Cancellation
@@ -102,7 +102,7 @@ account: 30 days of trial, plus 14 days of full-refund window on the
 first payment.
 
 To request a refund, email
-[support@hubmessage.app](mailto:support@hubmessage.app) with the
+[support@switchmessage.com](mailto:support@switchmessage.com) with the
 Paddle receipt number (it's at the top of the receipt email) and we'll
 process it within a few business days. The refund goes back to the
 same card or payment method that was charged.
@@ -131,7 +131,7 @@ If a renewal payment fails (expired card, insufficient funds, etc.):
 4. After Paddle's grace period expires, the subscription is cancelled
    and the app stops syncing.
 
-You can re-subscribe at any time and HubMessage will pick up where it
+You can re-subscribe at any time and SwitchMessage will pick up where it
 left off — your local cache and HubSpot data remain in place. Note
 that re-subscribing after a previous trial **does not** automatically
 restart the 30-day trial; the trial is offered once per customer by
@@ -141,6 +141,6 @@ If you have a genuine reason to need another trial under the same
 email address — for example, you were evaluating on behalf of someone
 else last time, or the previous trial was cut short by a circumstance
 outside your control — email
-[support@hubmessage.app](mailto:support@hubmessage.app) and ask. We
+[support@switchmessage.com](mailto:support@switchmessage.com) and ask. We
 grant additional trials on request in good faith and won't make you
 jump through hoops to justify it.

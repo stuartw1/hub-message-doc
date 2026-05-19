@@ -3,7 +3,7 @@ title: Resetting & signing out
 description: Three levels of clean-up, from "sign out" to "leave no trace".
 ---
 
-HubMessage offers three levels of clean-up depending on how much state you want
+SwitchMessage offers three levels of clean-up depending on how much state you want
 to remove.
 
 ## 1. Sign out
@@ -33,7 +33,7 @@ What it does:
   deduplication.
 
 When to use it: troubleshooting "stuck" sync state, or after a long
-period of being signed out when you want HubMessage to re-check what
+period of being signed out when you want SwitchMessage to re-check what
 it would have synced.
 
 ## 3. Full Reset & Sign Out
@@ -42,15 +42,15 @@ it would have synced.
 
 :::danger
 This is destructive. It deletes data from your HubSpot portal that
-HubMessage created. There is no undo.
+SwitchMessage created. There is no undo.
 :::
 
 What it does, in order:
 
 1. Stops background sync.
-2. **Deletes every HubSpot communication record HubMessage created.**
-   The records are identified by being authored by the HubMessage app
-   and having an `hs_unique_id` that matches the HubMessage format.
+2. **Deletes every HubSpot communication record SwitchMessage created.**
+   The records are identified by being authored by the SwitchMessage app
+   and having an `hs_unique_id` that matches the SwitchMessage format.
 3. Removes the custom iMessage channel from your conversations inbox.
 4. Wipes the local SwiftData cache.
 5. Resets all in-memory sync state.
@@ -58,27 +58,27 @@ What it does, in order:
 7. Signs out of OAuth (revokes the refresh token server-side, where
    possible).
 
-After a full reset, HubMessage is in the same state as a fresh install.
+After a full reset, SwitchMessage is in the same state as a fresh install.
 Communications created by other apps or by manual entry in HubSpot are
 **not** touched.
 
-When to use it: you're uninstalling HubMessage, you're handing the
+When to use it: you're uninstalling SwitchMessage, you're handing the
 portal over to a different team, or you want to start completely
 clean.
 
 ## Uninstalling the app
 
 After a full reset (or sign-out, if you don't mind the cache file
-remaining), you can uninstall HubMessage by:
+remaining), you can uninstall SwitchMessage by:
 
 1. Quitting it from the menu bar.
-2. Dragging **HubMessage.app** from `/Applications` to the Trash.
+2. Dragging **SwitchMessage.app** from `/Applications` to the Trash.
 
-If you want to remove every trace of HubMessage from your Mac,
+If you want to remove every trace of SwitchMessage from your Mac,
 also delete:
 
-- `~/Library/Preferences/uk.nvpartners.hubmessage.plist`
-- `~/Library/Containers/uk.nvpartners.hubmessage/`
-- `~/Library/Application Support/HubMessage/`
-- Keychain items under service name `uk.nvpartners.hubmessage` (Keychain
-  Access app → search "hubmessage")
+- `~/Library/Preferences/com.switchmessage.app.plist`
+- `~/Library/Containers/com.switchmessage.app/`
+- `~/Library/Application Support/SwitchMessage/`
+- Keychain items under service name `com.switchmessage.app` (Keychain
+  Access app → search "switchmessage")

@@ -1,7 +1,7 @@
-# hub-message-doc
+# switchmessage-doc
 
-Public documentation site for [HubMessage](https://hubmessage.app),
-served from **https://docs.hubmessage.app**.
+Public documentation site for [SwitchMessage](https://switchmessage.com),
+served from **https://docs.switchmessage.com**.
 
 Built with [Astro Starlight](https://starlight.astro.build/) (static HTML)
 and hosted on Cloudflare Workers, with the Worker enforcing **HTTP Basic
@@ -14,8 +14,8 @@ preview.
 - **Framework**: Astro 6 + Starlight
 - **Hosting**: Cloudflare Workers (static assets) + a small Worker for
   the password gate (`worker/index.ts`)
-- **Domain**: `docs.hubmessage.app` (custom domain, same Cloudflare
-  account as `api.hubmessage.app`)
+- **Domain**: `docs.switchmessage.com` (custom domain, same Cloudflare
+  account as `api.switchmessage.com`)
 
 ## Local development
 
@@ -55,7 +55,7 @@ the new build within seconds.
 
 ## Regenerating brand assets
 
-The canonical source logo lives at `src/assets/hubmessage-logo.png`
+The canonical source logo lives at `src/assets/switchmessage-logo.png`
 (500×500, with wordmark). Every derivative — the trimmed/transparent
 header icon, the favicon, the Apple touch icon, and the Open Graph
 social card — is generated from it by ImageMagick.
@@ -66,7 +66,7 @@ npm run icons
 
 This runs `scripts/build-icons.sh`, which writes:
 
-- `src/assets/hubmessage-icon.png` — bubbles-only, transparent
+- `src/assets/switchmessage-icon.png` — bubbles-only, transparent
   background (Starlight `logo.src`)
 - `public/favicon.png` — 32×32, transparent
 - `public/apple-touch-icon.png` — 180×180, white background
@@ -103,8 +103,8 @@ wrangler.toml         # Worker + static assets binding + custom domain
 
 ## Related repos
 
-- `hub-message-api/` — the API proxy Worker (`api.hubmessage.app`)
-- `xcode/HubMessage/` — the macOS client (separate repo)
+- `hub-message-api/` — the API proxy Worker (`api.switchmessage.com`)
+- `xcode/SwitchMessage/` — the macOS client (separate repo)
 
 When the docs reference behaviour of the app or the API proxy, that
 behaviour is **authoritatively defined** in those repos, not here. Keep

@@ -9,7 +9,7 @@ We're a small team and we read every message.
 
 The fastest way to reach us is by email:
 
-**[support@hubmessage.app](mailto:support@hubmessage.app)**
+**[support@switchmessage.com](mailto:support@switchmessage.com)**
 
 We aim to respond within one business day (Monday–Friday, UK time).
 Some weeks we manage same-day; please bear with us if a reply is
@@ -20,7 +20,7 @@ slower around weekends and UK public holidays.
 If something isn't working, the single most useful thing you can
 attach is your **debug log**:
 
-1. HubMessage Settings → **Advanced** → **Export debug log**.
+1. SwitchMessage Settings → **Advanced** → **Export debug log**.
 2. Save the resulting file somewhere.
 3. Attach it to your email.
 
@@ -37,7 +37,7 @@ panel has a **Show debug log** option that displays it in-app.
 Other useful things to mention:
 
 - The macOS version you're on (Apple menu → About This Mac).
-- The HubMessage version (visible at the bottom of Settings).
+- The SwitchMessage version (visible at the bottom of Settings).
 - Whether you signed in with OAuth or a Private App token.
 - A rough timestamp of when the problem occurred (so we can find
   the right entries in the log).
@@ -54,14 +54,14 @@ they come up. Categories that are currently top of the list:
 - Multi-contact association.
 
 If your use case needs one of these — or anything else — please
-[email us](mailto:support@hubmessage.app) and tell us how you'd
+[email us](mailto:support@switchmessage.com) and tell us how you'd
 use it. Concrete user stories move things up the list a lot
 faster than +1s.
 
 ## Security disclosures
 
 Found a security issue? Please email
-[support@hubmessage.app](mailto:support@hubmessage.app) with
+[support@switchmessage.com](mailto:support@switchmessage.com) with
 "SECURITY" in the subject line. We'll respond within one business
 day to acknowledge and coordinate a fix; please don't disclose
 publicly until we've had a chance to patch.

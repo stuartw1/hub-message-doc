@@ -1,11 +1,11 @@
 ---
 title: Terms of Service
-description: The terms that govern your use of HubMessage.
+description: The terms that govern your use of SwitchMessage.
 ---
 
 **Effective date:** 15 May 2026
 
-These terms ("Terms") govern your use of HubMessage (the "Software"),
+These terms ("Terms") govern your use of SwitchMessage (the "Software"),
 distributed by **Neko Venture Partners Limited** ("we", "us"). By
 installing or using the Software you agree to these Terms. If you do
 not agree, do not install or use it.
@@ -53,7 +53,7 @@ You may not:
   governing communications recording and processing (see Section 6).
 - Attempt to circumvent the rate limits, authentication, or
   allowlisting we enforce on our Cloudflare Worker proxy
-  (`api.hubmessage.app`).
+  (`api.switchmessage.com`).
 
 ## 4. HubSpot and third-party services
 
@@ -73,7 +73,7 @@ available at
 ## 5. Updates
 
 The Software checks for updates automatically using Sparkle. You can
-disable automatic checks in HubMessage Settings; manual update checks
+disable automatic checks in SwitchMessage Settings; manual update checks
 are always available. We may release updates that fix bugs, add
 features, or change behaviour. Continuing to use the Software after
 an update constitutes acceptance of the updated Software.
@@ -157,7 +157,7 @@ Terms.
 
 ## 12. Contact
 
-[support@hubmessage.app](mailto:support@hubmessage.app)
+[support@switchmessage.com](mailto:support@switchmessage.com)
 
 **Neko Venture Partners Limited**
 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom

@@ -1,9 +1,9 @@
 ---
 title: How sync works
-description: A plain-English walkthrough of what HubMessage does on every sync tick.
+description: A plain-English walkthrough of what SwitchMessage does on every sync tick.
 ---
 
-HubMessage's sync engine is **contacts-first**. It does not try to push every
+SwitchMessage's sync engine is **contacts-first**. It does not try to push every
 iMessage you've ever sent into HubSpot. Instead, it asks HubSpot what contacts
 you care about, and then only looks at iMessage conversations involving those
 people.
@@ -12,7 +12,7 @@ This keeps sync fast, predictable, and respectful of HubSpot's rate limits.
 
 ## On every tick
 
-By default, HubMessage runs a sync cycle every **60 seconds** (you can change
+By default, SwitchMessage runs a sync cycle every **60 seconds** (you can change
 this in [Settings](/guides/settings/)). On each tick it does roughly this:
 
 1. **Check network.** If you're offline, sync is paused; any messages
@@ -25,7 +25,7 @@ this in [Settings](/guides/settings/)). On each tick it does roughly this:
      changed since the last fetch.
    - Every 5 minutes, a full refresh runs as a safety net.
 4. **Build phone-number variants** for each cached contact (HubSpot stores
-   numbers in many formats; iMessage stores them in another). HubMessage
+   numbers in many formats; iMessage stores them in another). SwitchMessage
    generates the likely E.164 / national / no-prefix variants used by
    iMessage so the join works.
 5. **Query iMessage for new messages** only on conversations whose
@@ -48,12 +48,12 @@ this in [Settings](/guides/settings/)). On each tick it does roughly this:
 ## Deduplication
 
 HubSpot has built-in support for deduplicating communication records by
-the `hs_unique_id` property. HubMessage relies on that:
+the `hs_unique_id` property. SwitchMessage relies on that:
 
 - Every record carries an `hs_unique_id` deterministic for the source
   message.
-- If HubMessage retries a POST that already succeeded, HubSpot returns
-  an HTTP 400 with the existing record ID; HubMessage treats this as a
+- If SwitchMessage retries a POST that already succeeded, HubSpot returns
+  an HTTP 400 with the existing record ID; SwitchMessage treats this as a
   success and moves on.
 
 You should not see duplicate communications under a contact even after
@@ -69,19 +69,19 @@ The contact cache is incremental:
 - **Every 5 minutes:** a full refresh, as a belt-and-braces step in
   case an incremental fetch missed something due to clock skew.
 
-For a portal with thousands of contacts, this means HubMessage uses
+For a portal with thousands of contacts, this means SwitchMessage uses
 very few API calls per minute once it's warmed up.
 
 ## Rate limit handling
 
-If HubSpot returns HTTP 429 (rate limit exceeded), HubMessage backs off
+If HubSpot returns HTTP 429 (rate limit exceeded), SwitchMessage backs off
 exponentially: 60s → 120s → 240s → … up to a maximum of 3600s (1 hour).
 The next successful response resets the backoff to zero.
 
-This protects both your portal's daily quota and HubMessage's own
+This protects both your portal's daily quota and SwitchMessage's own
 developer credentials.
 
-## What HubMessage **doesn't** sync
+## What SwitchMessage **doesn't** sync
 
 To set expectations clearly, the current sync engine:
 
@@ -89,13 +89,13 @@ To set expectations clearly, the current sync engine:
   the text body of a message.
 - Does not sync **read receipts** or **typing indicators**.
 - Does not sync **group chats**. Each communication record is associated
-  with a single contact; HubMessage skips chats with more than one
+  with a single contact; SwitchMessage skips chats with more than one
   non-self participant.
 - Does not sync **iMessage reactions** as a separate event. A reaction
-  shows up in `chat.db` as a new message; HubMessage doesn't currently
+  shows up in `chat.db` as a new message; SwitchMessage doesn't currently
   collapse them into the parent message.
 - Does not sync messages **from before the date you first installed
-  HubMessage** by default — only new traffic forwards. (You can change
+  SwitchMessage** by default — only new traffic forwards. (You can change
   this in [Settings](/guides/settings/) if you want a backfill.)
 
 If any of these matter for your workflow, please

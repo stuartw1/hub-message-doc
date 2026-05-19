@@ -1,5 +1,5 @@
 /**
- * docs.hubmessage.app — Cloudflare Worker.
+ * docs.switchmessage.com — Cloudflare Worker.
  *
  * Sits in front of the Starlight-built static site (served via the ASSETS
  * binding) and gates every request behind HTTP Basic Auth. The password is a
@@ -33,7 +33,7 @@ export interface Env {
   ASSETS: Fetcher;
 }
 
-const REALM = 'HubMessage Docs (private preview)';
+const REALM = 'SwitchMessage Docs (private preview)';
 
 /**
  * Self-contained HTML for the two error responses the Worker can produce on
@@ -54,7 +54,7 @@ function errorPage(opts: {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>${opts.status} · ${opts.title} · HubMessage Docs</title>
+  <title>${opts.status} · ${opts.title} · SwitchMessage Docs</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <style>
     :root { color-scheme: light dark; }
@@ -114,7 +114,7 @@ function unauthorized(): Response {
       <p>If you've been given a password, your browser should prompt for it.
       Reload this page to bring the prompt back.</p>
       <p>If you don't have a password yet, email
-      <a href="mailto:support@hubmessage.app">support@hubmessage.app</a>
+      <a href="mailto:support@switchmessage.com">support@switchmessage.com</a>
       and we'll get you set up.</p>
     `,
   });
@@ -132,7 +132,7 @@ function misconfigured(): Response {
   const html = errorPage({
     status: 500,
     title: 'Server misconfiguration',
-    heading: 'docs.hubmessage.app is misconfigured.',
+    heading: 'docs.switchmessage.com is misconfigured.',
     body: `
       <p>The <code>DOCS_PASSWORD</code> secret hasn't been set on this
       Worker. The gate is fail-closed by design, so nothing is being
@@ -140,7 +140,7 @@ function misconfigured(): Response {
       <p>If you administer this site:
       <code>wrangler secret put DOCS_PASSWORD</code>.</p>
       <p>If you're a visitor: please email
-      <a href="mailto:support@hubmessage.app">support@hubmessage.app</a>
+      <a href="mailto:support@switchmessage.com">support@switchmessage.com</a>
       and let us know — we're sorry for the trouble.</p>
     `,
   });

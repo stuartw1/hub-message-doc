@@ -1,10 +1,10 @@
 #!/bin/sh
 # Regenerate every branded image derivative from the canonical source logo
-# at src/assets/hubmessage-logo.png. Replace that file and re-run
+# at src/assets/switchmessage-logo.png. Replace that file and re-run
 # `npm run icons` to refresh the whole set.
 #
 # Outputs:
-#   src/assets/hubmessage-icon.png   — bubbles-only, transparent bg (header)
+#   src/assets/switchmessage-icon.png   — bubbles-only, transparent bg (header)
 #   public/favicon.png               — 32x32, transparent bg (browser tab)
 #   public/apple-touch-icon.png      — 180x180, white bg (iOS home screen)
 #   public/og-image.png              — 1200x630 social card
@@ -15,7 +15,7 @@ set -eu
 
 cd "$(dirname "$0")/.."
 
-SRC="src/assets/hubmessage-logo.png"
+SRC="src/assets/switchmessage-logo.png"
 if [ ! -f "$SRC" ]; then
   echo "Error: $SRC not found. Put the source PNG there first." >&2
   exit 1
@@ -33,7 +33,7 @@ for f in "$FONT_REG" "$FONT_BOLD"; do
   fi
 done
 
-echo "→ src/assets/hubmessage-icon.png (transparent, trimmed)"
+echo "→ src/assets/switchmessage-icon.png (transparent, trimmed)"
 # Crop wordmark off the top, knock out the white background, trim to tight
 # bounding box, then add a small transparent border for breathing room.
 magick "$SRC" \
@@ -42,17 +42,17 @@ magick "$SRC" \
   -trim +repage \
   -bordercolor none -border 20 \
   -strip \
-  src/assets/hubmessage-icon.png
+  src/assets/switchmessage-icon.png
 
 echo "→ public/favicon.png (32x32, transparent)"
-magick src/assets/hubmessage-icon.png \
+magick src/assets/switchmessage-icon.png \
   -resize 32x32 -strip \
   public/favicon.png
 
 echo "→ public/apple-touch-icon.png (180x180, white bg)"
 # Older iOS rendered transparent areas as black; flattening over white avoids
 # that and matches the rounded-square aesthetic iOS applies on top.
-magick src/assets/hubmessage-icon.png \
+magick src/assets/switchmessage-icon.png \
   -background white -alpha remove -alpha off \
   -resize 180x180 -strip \
   public/apple-touch-icon.png
@@ -65,13 +65,13 @@ magick -size 1200x630 xc:white \
   -font "$FONT_REG"  -pointsize 32 -fill '#475569' \
   -gravity south -annotate +0+100 'Sync iMessages straight into HubSpot CRM' \
   -font "$FONT_BOLD" -pointsize 24 -fill '#ff7a59' \
-  -gravity south -annotate +0+50  'docs.hubmessage.app' \
+  -gravity south -annotate +0+50  'docs.switchmessage.com' \
   -strip \
   public/og-image.png
 
 echo
 echo "Done. Sizes:"
-ls -lh src/assets/hubmessage-icon.png \
+ls -lh src/assets/switchmessage-icon.png \
        public/favicon.png \
        public/apple-touch-icon.png \
        public/og-image.png

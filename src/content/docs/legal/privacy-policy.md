@@ -1,17 +1,17 @@
 ---
 title: Privacy Policy
-description: How Neko Venture Partners Limited handles your personal data when you use HubMessage.
+description: How Neko Venture Partners Limited handles your personal data when you use SwitchMessage.
 ---
 
 **Effective date:** 15 May 2026
 **Last updated:** 15 May 2026
 
-HubMessage ("the app", "we", "our") is a macOS menu bar utility that reads
+SwitchMessage ("the app", "we", "our") is a macOS menu bar utility that reads
 messages from your local iMessage database and syncs them to your HubSpot
 CRM. This document explains exactly what the app processes, what it stores,
 and where your data goes.
 
-If you are evaluating whether to install HubMessage, please read this in
+If you are evaluating whether to install SwitchMessage, please read this in
 full. By signing in to HubSpot through the app, you consent to the
 processing described below.
 
@@ -25,7 +25,7 @@ under company number **14784729**, with our registered office at
 **71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United
 Kingdom**. We do **not** operate a server that collects,
 aggregates, or analyses your message content. The Cloudflare Worker we
-run at `api.hubmessage.app` is a stateless proxy used only to inject
+run at `api.switchmessage.com` is a stateless proxy used only to inject
 API keys into requests you make to HubSpot — it does not log message
 bodies or store any user-identifiable data beyond standard request
 metadata required for rate-limiting (hashed bearer tokens and IP
@@ -78,7 +78,7 @@ our behalf. Their privacy policy:
   directly into Paddle's checkout. We never see or store your full
   card number.
 - **Email address and subscription state** — shared back to us so we
-  can match your subscription to your HubMessage account.
+  can match your subscription to your SwitchMessage account.
 
 ## 3. What the app does NOT collect
 
@@ -97,10 +97,10 @@ our behalf. Their privacy policy:
 |------|----------|-----------|
 | Cached iMessage records | Local SwiftData database in the app's container | Until you "Clear Local Cache" or "Full Reset & Sign Out" |
 | OAuth access / refresh tokens | macOS Keychain (your user account) | Until you sign out |
-| Sync configuration | macOS user defaults (`uk.nvpartners.hubmessage`) | Until you reset macOS preferences or run a Full Reset |
-| Debug log | A file under `~/Library/Application Support/HubMessage/Logs/` (one per app launch) | Until you delete it; the app also rotates older files |
+| Sync configuration | macOS user defaults (`com.switchmessage.app`) | Until you reset macOS preferences or run a Full Reset |
+| Debug log | A file under `~/Library/Application Support/SwitchMessage/Logs/` (one per app launch) | Until you delete it; the app also rotates older files |
 | Communication records | Your HubSpot portal | Per your HubSpot retention policy |
-| Proxy request metadata | Cloudflare Worker (`api.hubmessage.app`) | At most 24 hours |
+| Proxy request metadata | Cloudflare Worker (`api.switchmessage.com`) | At most 24 hours |
 | Subscription record | Paddle and our subscription database | For the life of your account plus 7 years for tax records, as required by UK law |
 
 ## 5. How requests reach HubSpot
@@ -108,7 +108,7 @@ our behalf. Their privacy policy:
 Most API calls go directly from your Mac to `api.hubapi.com` using your
 OAuth access token; we never see them. A small subset (HubSpot's
 "Custom Channels" endpoints and the OAuth token-exchange endpoint)
-route through our Cloudflare Worker at `api.hubmessage.app`, which:
+route through our Cloudflare Worker at `api.switchmessage.com`, which:
 
 - Adds the HubSpot developer API key / OAuth client secret server-side
   so those secrets never ship on your Mac.
@@ -132,7 +132,7 @@ rate-limit enforcement), retained for at most 24 hours.
   records the app created, removes the custom channel from your
   inbox, clears the local cache, and signs you out. Use this to
   leave no trace of the app's activity in HubSpot.
-- **Revoke OAuth**: you can also revoke the HubMessage app's access
+- **Revoke OAuth**: you can also revoke the SwitchMessage app's access
   from inside HubSpot at any time. The app will then prompt you to
   re-sign in or quit it.
 
@@ -142,7 +142,7 @@ about you, and to object to processing. We hold almost none — only
 what you've configured locally on your own Mac, the limited proxy
 metadata described above, and your subscription record at Paddle.
 To exercise these rights, contact us at
-[support@hubmessage.app](mailto:support@hubmessage.app).
+[support@switchmessage.com](mailto:support@switchmessage.com).
 
 You also have the right to lodge a complaint with the UK Information
 Commissioner's Office ([ico.org.uk](https://ico.org.uk)) if you
@@ -161,7 +161,7 @@ mechanisms.
 
 ## 8. Children's privacy
 
-HubMessage is not directed at children under 13 and we do not
+SwitchMessage is not directed at children under 13 and we do not
 knowingly process data about them. If you believe we have done so in
 error, please contact us and we will delete it.
 
@@ -176,7 +176,7 @@ notes.
 
 Questions about this policy, or to exercise your data-protection
 rights, email
-[support@hubmessage.app](mailto:support@hubmessage.app).
+[support@switchmessage.com](mailto:support@switchmessage.com).
 
 **Neko Venture Partners Limited**
 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom

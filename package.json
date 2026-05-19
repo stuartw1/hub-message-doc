@@ -1,7 +1,7 @@
 {
-  "name": "hub-message-doc",
+  "name": "switchmessage-doc",
   "version": "0.1.0",
-  "description": "Public documentation site for HubMessage (docs.hubmessage.app).",
+  "description": "Public documentation site for SwitchMessage (docs.switchmessage.com).",
   "type": "module",
   "private": true,
   "scripts": {
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/stuartw1/hub-message-doc/issues"
   },
-  "homepage": "https://docs.hubmessage.app",
+  "homepage": "https://docs.switchmessage.com",
   "dependencies": {
     "@astrojs/starlight": "^0.39.2",
     "astro": "^6.3.3"

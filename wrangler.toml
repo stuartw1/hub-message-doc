@@ -1,9 +1,9 @@
-name = "hub-message-doc"
+name = "switchmessage-doc"
 main = "worker/index.ts"
 compatibility_date = "2026-05-01"
 workers_dev = false
 
-# Cloudflare account that hosts hubmessage.app — matches the sibling
+# Cloudflare account that hosts switchmessage.com — matches the sibling
 # hub-message-api worker, so deploys go to the right tenant.
 account_id = "c07309771abb829078a03ffe0565e692"
 
@@ -29,11 +29,11 @@ run_worker_first = true
 # whenever env.ASSETS.fetch can't match a request to a built file.
 not_found_handling = "404-page"
 
-# Bound to the docs subdomain. The hubmessage.app zone lives on the same
+# Bound to the docs subdomain. The switchmessage.com zone lives on the same
 # Cloudflare account as the API worker, so custom_domain = true handles DNS
 # provisioning automatically.
 [[routes]]
-pattern = "docs.hubmessage.app"
+pattern = "docs.switchmessage.com"
 custom_domain = true
 
 # DOCS_PASSWORD is provisioned out-of-band:

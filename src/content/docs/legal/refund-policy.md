@@ -1,18 +1,18 @@
 ---
 title: Refund Policy
-description: Our 30-day free trial and 14-day no-questions-asked refund policy for HubMessage subscriptions.
+description: Our 30-day free trial and 14-day no-questions-asked refund policy for SwitchMessage subscriptions.
 ---
 
 **Effective date:** 15 May 2026
 
-This Refund Policy applies to all paid subscriptions to HubMessage,
+This Refund Policy applies to all paid subscriptions to SwitchMessage,
 provided by **Neko Venture Partners Limited** and processed by
 Paddle.com Market Limited as our Merchant of Record. It forms part of
 our [Terms of Service](/legal/terms-of-service/).
 
 ## 1. 30-day free trial
 
-Every new HubMessage account begins with a **30-day free trial**.
+Every new SwitchMessage account begins with a **30-day free trial**.
 **No card details or other payment information are collected to start
 the trial.** You only enter payment details if you choose to subscribe
 at (or after) the end of the trial.
@@ -30,7 +30,7 @@ or re-issue a 30-day trial.
 If you have a reasonable need for an additional trial under the same
 email address — for example, an interrupted earlier trial, a change of
 team, or a different evaluation context — you can email
-[support@hubmessage.app](mailto:support@hubmessage.app) to request
+[support@switchmessage.com](mailto:support@switchmessage.com) to request
 one. We grant additional trials on request in good faith and will
 respond within one business day.
 
@@ -58,7 +58,7 @@ from first sign-up** during which no money is irrevocably committed:
 ## 3. How to request a refund
 
 Email
-[support@hubmessage.app](mailto:support@hubmessage.app) and include:
+[support@switchmessage.com](mailto:support@switchmessage.com) and include:
 
 - The **Paddle receipt number** for the payment you would like
   refunded (it's printed at the top of every receipt Paddle emails
@@ -84,7 +84,7 @@ After 14 days have elapsed from the date of payment, refunds become
   refund seems fair, we may offer one.
 
 For these cases, please email
-[support@hubmessage.app](mailto:support@hubmessage.app) and explain
+[support@switchmessage.com](mailto:support@switchmessage.com) and explain
 the situation. We will respond within one business day.
 
 ## 5. Abusive patterns
@@ -108,7 +108,7 @@ escalate to Paddle's own dispute mechanisms.
 ## 6. What is *not* refundable
 
 - **Charges by HubSpot, Apple, or any third-party service** you use
-  alongside HubMessage. We have no ability to refund those; please
+  alongside SwitchMessage. We have no ability to refund those; please
   contact the relevant provider.
 - **Time elapsed against an active subscription** before
   cancellation. Cancelling a subscription stops it from renewing at
@@ -126,7 +126,7 @@ trial or 14-day window described here, the stronger remedy applies.
 ## 8. Contact
 
 For any refund or billing question:
-[support@hubmessage.app](mailto:support@hubmessage.app).
+[support@switchmessage.com](mailto:support@switchmessage.com).
 
 **Neko Venture Partners Limited**
 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom

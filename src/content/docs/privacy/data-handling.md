@@ -1,6 +1,6 @@
 ---
-title: What HubMessage accesses
-description: A plain-English overview of where your data flows when you use HubMessage.
+title: What SwitchMessage accesses
+description: A plain-English overview of where your data flows when you use SwitchMessage.
 ---
 
 This page is a **summary**. For the formal document, see the
@@ -8,17 +8,17 @@ This page is a **summary**. For the formal document, see the
 
 ## On your Mac
 
-HubMessage reads two things from your Mac:
+SwitchMessage reads two things from your Mac:
 
 1. **The iMessage database** at `~/Library/Messages/chat.db`. This is a
    SQLite file that macOS keeps for the Messages app. Reading it
    requires you to grant Full Disk Access in System Settings;
-   HubMessage cannot read it otherwise.
+   SwitchMessage cannot read it otherwise.
 2. **Its own settings and Keychain entries** that it writes itself —
    sync configuration, your HubSpot OAuth tokens, the numeric ID of
    the custom inbox channel.
 
-That's it. HubMessage does not read:
+That's it. SwitchMessage does not read:
 
 - Any other application's data
 - Your Safari history, contacts, calendar, or photos
@@ -26,7 +26,7 @@ That's it. HubMessage does not read:
 
 ## What gets sent to HubSpot
 
-HubMessage sends the following to your HubSpot portal (and only your
+SwitchMessage sends the following to your HubSpot portal (and only your
 HubSpot portal):
 
 - **Communication records** containing message text, timestamp, and
@@ -37,7 +37,7 @@ HubSpot portal):
 - **Standard API metadata** required by HubSpot (your Bearer token,
   the request body, request timestamps).
 
-HubMessage does not send to HubSpot:
+SwitchMessage does not send to HubSpot:
 
 - Messages from people who don't match any contact in your portal.
 - Attachments (the current version is text-only).
@@ -46,9 +46,9 @@ HubMessage does not send to HubSpot:
 
 ## What flows through our servers
 
-The vast majority of HubMessage's traffic goes **directly** from your
+The vast majority of SwitchMessage's traffic goes **directly** from your
 Mac to `api.hubapi.com` using your OAuth token. A small subset routes
-through our Cloudflare Worker at `api.hubmessage.app`:
+through our Cloudflare Worker at `api.switchmessage.com`:
 
 | Endpoint | Why proxied |
 |---|---|
@@ -66,12 +66,12 @@ For more on why this proxy exists and how it's hardened, see the
 [Privacy Policy](/legal/privacy-policy/) section "How requests reach
 HubSpot".
 
-## What HubMessage does not do
+## What SwitchMessage does not do
 
-- **No analytics.** HubMessage does not send usage telemetry to us or
+- **No analytics.** SwitchMessage does not send usage telemetry to us or
   any third party.
 - **No crash reports.** If the app crashes, macOS will collect a
-  standard crash log on your Mac — HubMessage does not upload it.
+  standard crash log on your Mac — SwitchMessage does not upload it.
 - **No tracking identifiers.** No advertising ID, no fingerprint, no
   cross-app identifier.
 - **No third-party SDKs** except [Sparkle](https://sparkle-project.org/)
