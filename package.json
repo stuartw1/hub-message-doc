@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stuartw1/hub-message-doc.git"
+    "url": "git+https://github.com/stuartw1/switchmessage-doc.git"
   },
   "author": "Neko Venture Partners Limited",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/stuartw1/hub-message-doc/issues"
+    "url": "https://github.com/stuartw1/switchmessage-doc/issues"
   },
   "homepage": "https://docs.switchmessage.com",
   "dependencies": {
