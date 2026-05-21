@@ -3,7 +3,7 @@ title: Terms of Service
 description: The terms that govern your use of SwitchMessage.
 ---
 
-**Effective date:** 15 May 2026
+**Effective date:** 18 May 2026
 
 These terms ("Terms") govern your use of SwitchMessage (the "Software"),
 distributed by **Neko Venture Partners Limited** ("we", "us"). By
@@ -24,8 +24,10 @@ property rights in it.
 
 Some features of the Software require an active subscription.
 Subscriptions are billed by **Paddle.com Market Limited** as our
-Merchant of Record. Pricing, billing cycles, and applicable taxes are
-shown at the point of checkout.
+Merchant of Record. Current plans are listed on our
+[pricing page](https://switchmessage.com/pricing); final pricing,
+billing cycles, and applicable taxes are shown at the point of
+checkout.
 
 Every new account begins with a **30-day free trial**; no card
 details are required to start the trial, and you will only be billed
@@ -50,7 +52,7 @@ You may not:
   send spam, malware, or otherwise abusive communications.
 - Use the Software to access, copy, or relay messages between people
   who have not consented to that use under your jurisdiction's laws
-  governing communications recording and processing (see Section 6).
+  governing communications recording and processing (see Section 7).
 - Attempt to circumvent the rate limits, authentication, or
   allowlisting we enforce on our Cloudflare Worker proxy
   (`api.switchmessage.com`).
@@ -70,7 +72,30 @@ Payment processing is performed by Paddle under their own terms,
 available at
 [https://www.paddle.com/legal](https://www.paddle.com/legal).
 
-## 5. Updates
+## 5. Intellectual property and trademarks
+
+**SwitchMessage**, the SwitchMessage logo, and related marks are
+trademarks of **Neko Venture Partners Limited**. The Software, its
+source code, documentation, and visual design are © Neko Venture
+Partners Limited and are licensed, not sold, to you under these Terms.
+All rights not expressly granted in these Terms are reserved.
+
+**HubSpot**, the HubSpot logo, **Sales Hub**, **Service Hub**, and
+related marks are trademarks of HubSpot, Inc. **Paddle** is a
+trademark of Paddle.com Market Limited. **Apple**, **Mac**, **macOS**,
+**iMessage**, and **Keychain** are trademarks of Apple Inc.
+**Sparkle** is open-source software released under the MIT Licence;
+the full licence text is reproduced in the SwitchMessage "About"
+panel.
+
+SwitchMessage is an **independent product** and is not affiliated
+with, sponsored by, or endorsed by HubSpot, Inc., Apple Inc., or
+Paddle.com Market Limited. References to those companies and their
+products on this site and in the Software are descriptive — to
+identify the third-party services SwitchMessage interoperates with —
+and do not imply any partnership or approval.
+
+## 6. Updates
 
 The Software checks for updates automatically using Sparkle. You can
 disable automatic checks in SwitchMessage Settings; manual update checks
@@ -78,7 +103,7 @@ are always available. We may release updates that fix bugs, add
 features, or change behaviour. Continuing to use the Software after
 an update constitutes acceptance of the updated Software.
 
-## 6. Your responsibility for the content you sync
+## 7. Your responsibility for the content you sync
 
 You are solely responsible for ensuring you have the legal right to
 read, store, transfer, and process the iMessage content the Software
@@ -91,7 +116,7 @@ specific use complies with your local laws, your employer's
 policies, or any agreements you have with the other parties to those
 conversations.
 
-## 7. Disclaimer of warranties
+## 8. Disclaimer of warranties
 
 THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY
 OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
@@ -107,7 +132,7 @@ fraudulent misrepresentation, death or personal injury caused by
 negligence, or any other liability that cannot be excluded under
 applicable law.
 
-## 8. Limitation of liability
+## 9. Limitation of liability
 
 To the maximum extent permitted by law, in no event will we be liable
 to you for any indirect, incidental, consequential, special,
@@ -127,7 +152,7 @@ Some jurisdictions do not permit certain limitations of liability; in
 those jurisdictions, our liability will be limited to the maximum
 extent permitted by law.
 
-## 9. Termination
+## 10. Termination
 
 We may terminate or suspend your licence to the Software at any time
 if you breach these Terms or use the Software in a way we reasonably
@@ -136,9 +161,9 @@ cancelling any active subscription (see
 [Subscriptions](/billing/subscriptions/)) and quitting and uninstalling
 the Software.
 
-On termination, Sections 6, 7, 8, 10, and 11 survive.
+On termination, Sections 5, 7, 8, 9, 11, and 12 survive.
 
-## 10. Governing law
+## 11. Governing law
 
 These Terms are governed by the laws of England and Wales, and the
 courts of England and Wales will have exclusive jurisdiction over any
@@ -146,7 +171,7 @@ dispute arising out of or relating to them. Nothing in this section
 deprives a consumer of the protection of mandatory rules of the law
 of the country in which they are habitually resident.
 
-## 11. Changes to these Terms
+## 12. Changes to these Terms
 
 We may update these Terms; the new version takes effect on the
 "Effective date" shown at the top. Material changes will be
@@ -155,7 +180,7 @@ active subscribers. Continuing to use the Software after the
 effective date of a change constitutes acceptance of the updated
 Terms.
 
-## 12. Contact
+## 13. Contact
 
 [support@switchmessage.com](mailto:support@switchmessage.com)
 
